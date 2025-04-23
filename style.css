@@ -53,3 +53,30 @@ footer {
     color: #aaa;
 }
 
+.fighter-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: max-content auto;
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+.stats h3 {
+    grid-column: 1 / -1;
+    margin: 0 0 10px;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+
+
+
