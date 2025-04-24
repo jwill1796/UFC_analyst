@@ -77,6 +77,56 @@ footer {
     font-size: 1.4rem;
 }
 
-
+/* Testing styles */
+.fighter-comparison {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .fighter {
+    width: 20%;
+  }
+  
+  .stat-label {
+    margin: 25px 0;
+    text-align: center;
+  }
+  
+  .bar-chart {
+    width: 60%;
+  }
+  
+  .bar-row {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin: 15px 0;
+    position: relative;
+  }
+  
+  .bar {
+    height: 100%;
+    background-color: #3498db;
+    transition: width 1s ease;
+  }
+  
+  .bar.left {
+    background-color: red;
+    margin-right: auto;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .bar.right {
+    background-color: green;
+    margin-left: auto;
+    border-radius: 5px 0 0 5px;
+  }
+  
 
 
