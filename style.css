@@ -76,9 +76,18 @@ footer {
 
 .stats {
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: 120px 1fr;
     column-gap: 10px;
-    row-gap: 5px;
+    row-gap: 8px;
+}
+
+.stats p {
+    display: contents; /* Allows span + text to work properly in grid */
+}
+
+.stats span {
+    font-weight: bold;
+    color: #fff;
 }
 
 .stats h3 {
@@ -89,55 +98,87 @@ footer {
 }
 
 /* Testing styles */
-.fighter-comparison {
+
+.align-top {
+    align-self: flex-start;
+}
+
+.comparison-layout {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
-    width: 100%;
-    max-width: 1000px;
-    margin: 40px auto;
-    font-family: Arial, sans-serif;
-  }
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.fighter-comparison {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0;
+}
+
+.fighter-profile {
+    flex: 1;
+    min-width: 280px;
+}
+
   
   .fighter {
     width: 20%;
   }
   
-  .stat-label {
-    margin: 25px 0;
-    text-align: center;
+
+  .divergent-chart {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
   }
   
-  .bar-chart {
-    width: 60%;
-  }
-  
-  .bar-row {
+  .divergent-row {
     display: flex;
     align-items: center;
-    height: 30px;
-    margin: 15px 0;
-    position: relative;
+    margin: 10px 0;
   }
   
   .bar {
-    height: 100%;
-    background-color: #3498db;
-    transition: width 1s ease;
+    height: 30px;
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 5px;
   }
   
   .bar.left {
     background-color: rgb(240, 47, 47);
-    margin-right: auto;
-    border-radius: 0 5px 5px 0;
+    margin-right: 10px;
+    justify-content: flex-end;
+    border-radius: 5px 0 0 5px;
   }
   
   .bar.right {
     background-color: rgb(31, 115, 241);
-    margin-left: auto;
-    border-radius: 5px 0 0 5px;
+    margin-left: 10px;
+    justify-content: flex-start;
+    border-radius: 0 5px 5px 0;
   }
+  
+  .stat-label {
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  
+  
   
   .heroblog {
     background-image: url('images/ufc_analyst.jpg'); 
