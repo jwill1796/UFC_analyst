@@ -117,13 +117,13 @@ footer {
   }
   
   .bar.left {
-    background-color: red;
+    background-color: rgb(240, 47, 47);
     margin-right: auto;
     border-radius: 0 5px 5px 0;
   }
   
   .bar.right {
-    background-color: green;
+    background-color: rgb(31, 115, 241);
     margin-left: auto;
     border-radius: 5px 0 0 5px;
   }
