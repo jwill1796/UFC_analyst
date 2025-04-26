@@ -13,6 +13,7 @@ header {
     color: white;
 }
 
+
 h1 {
     margin: 0;
     font-size: 2.5rem;
@@ -26,6 +27,7 @@ h1 {
 
 .card-details{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -97,6 +99,17 @@ footer {
     font-size: 1.4rem;
 }
 
+.tale-of-the-tape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Testing styles */
 
 .align-top {
@@ -141,9 +154,28 @@ footer {
   }
   
   .divergent-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
     align-items: center;
     margin: 10px 0;
+    gap: 0;
+    position: relative;
+    height: 40px;
+  }
+
+  .stat-label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1;
+    background-color: rgba(34, 34, 34, 1);
+    padding: 5px 20px;
+    border-radius: 4px;
+    min-width: 183.75px;
+    box-sizing: border-box;
   }
   
   .bar {
@@ -152,33 +184,28 @@ footer {
     font-size: 0.8rem;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding: 0 5px;
+    padding: 0;
+    margin: 0;
+    transform-origin: center;
   }
   
   .bar.left {
     background-color: rgb(240, 47, 47);
-    margin-right: 10px;
-    justify-content: flex-end;
     border-radius: 5px 0 0 5px;
+    justify-content: flex-start;
+    grid-column: 1;
+    margin-left: auto;
+    direction: rtl;
   }
   
   .bar.right {
     background-color: rgb(31, 115, 241);
-    margin-left: 10px;
-    justify-content: flex-start;
     border-radius: 0 5px 5px 0;
+    justify-content: flex-start;
+    grid-column: 3;
+    margin-right: auto;
   }
-  
-  .stat-label {
-    width: 150px;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  
-  
+    
   
   .heroblog {
     background-image: url('images/ufc_analyst.jpg'); 

@@ -11,22 +11,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const row = document.createElement("div");
     row.classList.add("divergent-row");
 
+    const label = document.createElement("div");
+    label.classList.add("stat-label");
+    label.textContent = stat.label;
+
     const leftBar = document.createElement("div");
     leftBar.classList.add("bar", "left");
     leftBar.style.width = stat.left + "%";
     leftBar.textContent = stat.left;
-
-    const label = document.createElement("div");
-    label.classList.add("stat-label");
-    label.textContent = stat.label;
 
     const rightBar = document.createElement("div");
     rightBar.classList.add("bar", "right");
     rightBar.style.width = stat.right + "%";
     rightBar.textContent = stat.right;
 
-    row.appendChild(leftBar);
     row.appendChild(label);
+    row.appendChild(leftBar);
     row.appendChild(rightBar);
 
     chart.appendChild(row);
